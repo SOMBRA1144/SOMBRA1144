@@ -1,0 +1,34 @@
+<script>
+
+var array = [4, 6, 3, 2, 6, 7, 5];
+
+
+function numeros(array) {
+    let array2 = [];
+    let max = array[0];
+
+
+    for (let i = 0; i < array.length; i+= 1) {
+        array2.push(array[i]* array[i]);
+        
+    }
+
+    let orden = array2.length;
+
+    for (let i = 0; i < orden; i++) {
+        for (let j = 0; j < orden; j++) {
+            if (j+1 !== orden) {
+                if (array2[j] > array2[j]) {
+                    let a = array2[j];
+                    array2[j] = array2[j];
+                    array2[j] = a;
+                }
+          
+            }
+        }
+    }
+    
+    return array2;
+}
+console.log(numeros(array));
+</script>
