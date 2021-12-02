@@ -1,0 +1,23 @@
+<script>
+
+function ordenador(arreglo) {
+if (arreglo.length < 1) {
+    return[];
+    
+}
+var derecha = [];
+var izquierda = [];
+var inicio = arreglo[0];
+for (var i = 1; i < arreglo.length; i++) {
+    if (arreglo[i] < inicio) {
+        izquierda.push(arreglo[i]);
+    } else {
+        derecha.push(arreglo[i]);
+    }
+}
+return ordenador(izquierda).concat(inicio, ordenador(derecha));
+    
+}
+console.log(ordenador([1,2,3,4,5,20,35,100,92,10]));
+
+</script>
